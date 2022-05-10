@@ -3,19 +3,21 @@ import Person from './Person.js'
 
 
 const App = () => {
-  const name = 'Muhammad'
-  const host = 'Mama'
-  const isNameShowing = false
+  // const name = 'Muhammad'
+  // const host = 'Mama'
+  // const isNameShowing = false
 
   return (
     <div className="App">
   
+     <h1>Welcome to the Harry Potter book club!</h1>
+     <h2> Here are the current members:  </h2> 
      
-      <Person name={'Muhammad'} lastname={'B'} age={'9'}/>
-      <Person name={'Inaya'} lastname={'K'} age={'11'}/>
-      <Person name={'Hasan'} lastname={'K'} age={'9'}/>
-      <Person name={'Ali'} lastname={'D'} age={'8'}/>
-      <Person name={'Recep'} lastname={'H'} age={'9'}/>
+      <Person name={'Muhammad B'} age={'9'}/>
+      <Person name={'Inaya K'} age={'11'}/>
+      <Person name={'Hasan K'}  age={'9'}/>
+      <Person name={'Ali D'} age={'8'}/>
+      <Person name={'Eda B'} age={'9'}/>
       
     </div>
   )

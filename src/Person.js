@@ -5,9 +5,9 @@ const Person = (props) => {
     return (
       <>
       {/* <h1> First Name: Harry </h1> */}
-      <h1> First Name: {props.name} </h1>
-      <h1> Last Name: {props.lastname} </h1>
-      <h2> Age: {props.age} </h2>
+      <h3>Reader: {props.name}</h3>
+      {/* <h3> Last Name: {props.lastname} </h3> */}
+      <h3> Age: {props.age} </h3>
   
       </>
     )
