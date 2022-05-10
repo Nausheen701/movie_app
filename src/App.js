@@ -1,6 +1,6 @@
 import './App.css'
 
-const Person
+
 
 const App = () => {
   const name = 'Muhammad'
@@ -9,6 +9,8 @@ const App = () => {
 
   return (
     <div className="App">
+      
+
       <h1>Hello from {host}</h1>
       {/* <h2>Hello {isNameShowing ? name : 'friend'}</h2> */}
       <h3></h3>
@@ -22,10 +24,14 @@ const App = () => {
         <h1>test</h1>
         <h2>Who are you, friend?</h2> 
         </>
-        
 
-      
       )}
+<br></br>
+      <Person name={'Bilal'}/>
+      <Person />
+      <Person />
+      <Person />
+      <Person />
     </div>
   );
 }
