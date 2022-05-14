@@ -1,55 +1,80 @@
-// import './App.css'
+import './App.css'
+import { useEffect } from 'react'
+import SearchIcon from './search.svg'
 
-import Person from './Person.js'
-import Book from './Book.js'
+const API_URL = 'http://www.omdbapi.com?apikey=e77dcbb9'
 
-
-const App = () => {
-  return (
-    <>
-    <div>
-      <Book title={'Philosophers Stone'}/>
-      <Book title={'Chamber of Secrets'}/>
-      <Book title={'Prisoner of Azkaban'}/>
-      <Book title={'Goblet of Fire'}/>
-      <Book title={'Order of the Phoenix'}/>
-      <Book title={'Half-Blood Prince'}/>
-      <Book title={'Deathly Hallows'}/>
-    </div>
-    <div className="App"><center>
-       <Person name={'Muhammad B'} age={'9'} city={'Istanbul'}/>
-       <Person name={'Inaya K'} age={'11'} city={'Livingston'}/>
-       <Person name={'Hasan K'} age={'9'} city={'Livingston'}/>
-       <Person name={'Ali D'} age={'8'} city={'Istanbul'}/>
-       <Person name={'Eda B'} age={'10'} city={'Istanbul'}/>  
-       </center></div>
-       </>
-  )
+const movie1 = {
+  "Title": "Amazing Spiderman Syndrome",
+  "Year": "2012"
 }
 
-export default App
+const App = () => {
 
+  const searchMovies = async (title) => {
+    const response = await fetch(`${API_URL}&s=${title}`)
+    const data = await response.json()
+
+    console.log(data.Search)
+
+  }
+  useEffect(() => {
+    searchMovies('Spiderman')
+  }, [])
+
+  return (
+    <div classname="app">
+      <h1>MovieLand</h1>
+      <div className="search">
+        <input
+          placeholder="Search for movies"
+          value="Superman"
+          onChange={() => {}}
+          />
+          <img  
+            src={SearchIcon}
+            alt="search"
+            onCLick={() => {}}
+          />
+      </div>
+      <div  className="container">
+        <div className="movie">
+          <div>
+            <p>{movie1.Year}</p>
+          </div>
+          <div>
+            <img src={movie1.Poster !== 'N/A' ? movie1.Poster : 'https://via.placeholder.com/400'} alt={movie1.Title}/>
+          </div>
+          <div>
+            <span>{movie1.Type}</span>
+            <h3>{movie1.Title}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  )
+  }
+
+  export default App 
 
  // const name = 'Muhammad'
   // const host = 'Mama'
   // const isNameShowing = false
 
-  
 
+  //  <h1>Salams from {host}</h1>
+  // <h2>Hello {isNameShowing ? name : 'friend'}</h2> 
+  // {name ? ( */} */}
+    // <> 
+// test */}
+    // <h1>Hi {name}</h1> */}
+    //  </>
+//  ) : ( 
+    // <>
+//  <h1>test</h1>
+  //  <h2>Who are you, friend?</h2>
+//   </>
 
-  // <h1>Salams from {host}</h1>
-  // {/* <h2>Hello {isNameShowing ? name : 'friend'}</h2> */}
-  // <h3></h3>
-  // {name ? (
-  //   <> 
-  //   {/* test */}
-  //   <h1>Hi {name}</h1>
-  //   </>
-  // ) : ( 
-  //   <>
-  //   <h1>test</h1>
-  //   <h2>Who are you, friend?</h2> 
-  //   </>
-
-  // )}
+//  )}
 
